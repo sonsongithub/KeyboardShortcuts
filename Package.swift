@@ -5,7 +5,7 @@ let package = Package(
 	name: "KeyboardShortcuts",
 	defaultLocalization: "en",
 	platforms: [
-		.macOS(.v10_15)
+		.macOS(.v10_13)
 	],
 	products: [
 		.library(

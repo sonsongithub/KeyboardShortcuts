@@ -491,6 +491,7 @@ extension KeyboardShortcuts {
 
 	- Note: This method is not affected by `.removeAllHandlers()`.
 	*/
+    @available(macOS 15, *)
 	public static func events(for name: Name) -> AsyncStream<KeyboardShortcuts.EventType> {
 		AsyncStream { continuation in
 			let id = UUID()
@@ -547,6 +548,7 @@ extension KeyboardShortcuts {
 
 	- Note: This method is not affected by `.removeAllHandlers()`.
 	*/
+    @available(macOS 15, *)
 	public static func events(_ type: EventType, for name: Name) -> AsyncFilterSequence<AsyncStream<EventType>> {
 		events(for: name).filter { $0 == type }
 	}

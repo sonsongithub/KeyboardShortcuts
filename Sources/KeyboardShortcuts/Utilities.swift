@@ -428,7 +428,7 @@ final class ObjectAssociation<T> {
 	}
 }
 
-
+@available(macOS 15, *)
 extension HorizontalAlignment {
 	private enum ControlAlignment: AlignmentID {
 		static func defaultValue(in context: ViewDimensions) -> CGFloat { // swiftlint:disable:this no_cgfloat
@@ -439,6 +439,7 @@ extension HorizontalAlignment {
 	fileprivate static let controlAlignment = Self(ControlAlignment.self)
 }
 
+@available(macOS 15, *)
 extension View {
 	func formLabel(@ViewBuilder _ label: () -> some View) -> some View {
 		HStack(alignment: .firstTextBaseline) {

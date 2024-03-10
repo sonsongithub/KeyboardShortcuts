@@ -1,7 +1,7 @@
 #if os(macOS)
 import SwiftUI
 
-@available(macOS 12, *)
+@available(macOS 15, *)
 extension View {
 	/**
 	Register a listener for keyboard shortcut events with the given name.
