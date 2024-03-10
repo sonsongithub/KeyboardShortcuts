@@ -1,6 +1,7 @@
 #if os(macOS)
 import SwiftUI
 
+@available(macOS 12, *)
 extension KeyboardShortcuts {
 	private struct _Recorder: NSViewRepresentable { // swiftlint:disable:this type_name
 		typealias NSViewType = RecorderCocoa
@@ -87,6 +88,7 @@ extension KeyboardShortcuts {
 	}
 }
 
+@available(macOS 12, *)
 extension KeyboardShortcuts.Recorder<EmptyView> {
 	/**
 	- Parameter name: Strongly-typed keyboard shortcut name.
@@ -104,6 +106,7 @@ extension KeyboardShortcuts.Recorder<EmptyView> {
 	}
 }
 
+@available(macOS 12, *)
 extension KeyboardShortcuts.Recorder<Text> {
 	/**
 	- Parameter title: The title of the keyboard shortcut recorder, describing its purpose.
@@ -125,6 +128,7 @@ extension KeyboardShortcuts.Recorder<Text> {
 	}
 }
 
+@available(macOS 12, *)
 extension KeyboardShortcuts.Recorder<Text> {
 	/**
 	- Parameter title: The title of the keyboard shortcut recorder, describing its purpose.
@@ -147,6 +151,7 @@ extension KeyboardShortcuts.Recorder<Text> {
 	}
 }
 
+@available(macOS 12, *)
 extension KeyboardShortcuts.Recorder {
 	/**
 	- Parameter name: Strongly-typed keyboard shortcut name.
@@ -167,16 +172,19 @@ extension KeyboardShortcuts.Recorder {
 	}
 }
 
+@available(macOS 12, *)
 #Preview {
 	KeyboardShortcuts.Recorder("record_shortcut", name: .init("xcodePreview"))
 		.environment(\.locale, .init(identifier: "en"))
 }
 
+@available(macOS 12, *)
 #Preview {
 	KeyboardShortcuts.Recorder("record_shortcut", name: .init("xcodePreview"))
 		.environment(\.locale, .init(identifier: "zh-Hans"))
 }
 
+@available(macOS 12, *)
 #Preview {
 	KeyboardShortcuts.Recorder("record_shortcut", name: .init("xcodePreview"))
 		.environment(\.locale, .init(identifier: "ru"))
